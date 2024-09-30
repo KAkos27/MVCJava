@@ -1,16 +1,21 @@
 package main;
 
 import modell.JatekModell;
+import nezet.CuiNezet;
 import nezet.FelugroNezet;
 import nezet.KonzolNezet;
-import vezerlo.FelugroVezerlo;
-import vezerlo.KonzolVezerlo;
+import vezerlo.CuiVezerlo;
 
 public class KincsesLada {
 
     public static void main(String[] args) {
 
-        new KonzolVezerlo(new JatekModell(), new KonzolNezet());
-        new FelugroVezerlo(new JatekModell(), new FelugroNezet());
+        CuiNezet nezet;
+        nezet = new KonzolNezet();
+        new CuiVezerlo(new JatekModell(), nezet);
+
+        nezet = new FelugroNezet();
+        new CuiVezerlo(new JatekModell(), nezet);
+
     }
 }
