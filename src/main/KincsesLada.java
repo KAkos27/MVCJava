@@ -1,11 +1,13 @@
 package main;
 
-import modell.Jatek;
+import modell.JatekModell;
+import nezet.KonzolNezet;
+import vezerlo.KonzolVezerlo;
 
 public class KincsesLada {
 
     public static void main(String[] args) {
-        Jatek jatek = new Jatek();
-    }
 
+        new KonzolVezerlo(new JatekModell(), new KonzolNezet());
+    }
 }
