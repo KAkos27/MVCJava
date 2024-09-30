@@ -2,20 +2,18 @@ package nezet;
 
 import java.util.Scanner;
 
-public class KonzolNezet {
+public class KonzolNezet extends CuiNezet {
 
     private static final Scanner sc = new Scanner(System.in);
 
-    public KonzolNezet() {
-
-    }
-
+    @Override
     public int bekeres() {
 
         kiiras("Melyikben van a kincs? (1, 2, 3): ");
         return sc.nextInt() - 1;
     }
 
+    @Override
     public void kiiras(String szoveg) {
 
         System.out.print(szoveg);
